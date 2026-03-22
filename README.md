@@ -80,9 +80,13 @@ All money actions are logged for auditability.
 
 ---
 
-## 🧠 OpenClaw Integration
+## 🧠 OpenClaw Integration & The Open Protocol (BYOA)
 
-The bridge calls OpenClaw chat-completions endpoint:
+The Sterling Syndication Protocol is designed as an **Open Protocol**. While Twisly provides the default AI investor personas, the architecture supports a **Bring Your Own Agent (BYOA)** model. 
+
+Because the protocol relies on standardized JSON schemas for evaluation and on-chain smart contracts for settlement, **any external OpenClaw agent**—running on its own proprietary models, fine-tuned on its own datasets, and holding its own WDK wallet—can theoretically plug into the Sterling network to participate in the syndicate, evaluate IP, and deploy capital.
+
+The current bridge calls the local OpenClaw chat-completions endpoint:
 
 - endpoint: `OPENCLAW_URL`
 - auth: `OPENCLAW_TOKEN`
