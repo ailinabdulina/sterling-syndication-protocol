@@ -1,0 +1,86 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAgent() {
+      // The specific UID for the Sterling agent processor
+      return isSignedIn() && request.auth.uid == 'e8WdmWEILBNZwfNmgX0PZAMHxyI3';
+    }
+
+    function isOwner(data) {
+      return isSignedIn() && data.authorUid == request.auth.uid;
+    }
+
+    match /private_keys/{userId} {
+      // Only the owner can read and write their private key
+      allow read, write: if isSignedIn() && request.auth.uid == userId;
+    }
+
+    match /agent_tasks/{taskId} {
+      // Allow creation if signed in and setting themselves as author
+      // SECURITY: Prevent massive payloads (DoS) and ensure strict schema
+      allow create: if isSignedIn() 
+                    && request.resource.data.authorUid == request.auth.uid
+                    && request.resource.data.status == 'pending'
+                    && !('result' in request.resource.data)
+                    && (
+                      // Schema for analyze_story
+                      (request.resource.data.type == 'analyze_story' 
+                       && request.resource.data.payload.keys().hasOnly(['text'])
+                       && request.resource.data.payload.text is string
+                       && request.resource.data.payload.text.size() < 100000)
+                      ||
+                      // Schema for syndicate_review
+                      (request.resource.data.type == 'syndicate_review'
+                       && request.resource.data.payload.keys().hasOnly(['sourceTaskId'])
+                       && request.resource.data.payload.sourceTaskId is string
+                       && request.resource.data.payload.sourceTaskId.size() < 100)
+                      ||
+                      // Schema for contract_settlement
+                      (request.resource.data.type == 'contract_settlement'
+                       && request.resource.data.payload.sourceTaskId is string
+                       && request.resource.data.payload.investorAgentName is string
+                       && request.resource.data.payload.amountUsd is number)
+                      ||
+                      // Schema for marketing_execution
+                      (request.resource.data.type == 'marketing_execution'
+                       && request.resource.data.payload.keys().hasOnly(['settlementTaskId', 'sourceTaskId'])
+                       && request.resource.data.payload.settlementTaskId is string
+                       && request.resource.data.payload.sourceTaskId is string)
+                      ||
+                      // Schema for buy_story
+                      (request.resource.data.type == 'buy_story'
+                       && request.resource.data.keys().hasAll(['buyerUid'])
+                       && request.resource.data.buyerUid is string
+                       && request.resource.data.payload.keys().hasOnly(['storyId', 'priceUsd', 'contractAddress'])
+                       && (request.resource.data.payload.storyId is string || request.resource.data.payload.storyId is number)
+                       && (request.resource.data.payload.priceUsd is number || request.resource.data.payload.priceUsd is string)
+                       && request.resource.data.payload.contractAddress is string)
+                    );
+
+      // Allow reading if the task is completed (for global feed), or if the user is the owner or the agent
+      allow read: if resource.data.status == 'completed' || (isSignedIn() && (isOwner(resource.data) || isAgent()));
+
+      // Allow updates ONLY by the agent (for results) or the owner (for status changes if needed)
+      // SECURITY: Owners cannot modify the result/financial data, only the agent can
+      allow update: if isAgent() 
+                    || (isOwner(resource.data) 
+                        // Owners can only update if they aren't trying to change the authorUid
+                        && request.resource.data.authorUid == resource.data.authorUid
+                        // Owners cannot modify the 'result' field (where financial/offer data lives)
+                        && (!('result' in request.resource.data) || request.resource.data.result == resource.data.result)
+                        // Owners cannot change the type of task
+                        && request.resource.data.type == resource.data.type
+                        // Owners cannot change the payload
+                        && request.resource.data.payload == resource.data.payload);
+
+      // No deletions allowed
+      allow delete: if false;
+    }
+  }
+}
