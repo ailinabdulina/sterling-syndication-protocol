@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  button:not(:disabled), [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@theme {
+  --animate-shake: shake 0.5s ease-in-out;
+  --animate-typing-dot: typing-dot 1.4s infinite both;
+  --animate-wiggle: wiggle 2s ease-in-out infinite;
+  --animate-slideUp: slideUp 4s linear infinite;
+  --animate-flyInLeft: flyInLeft 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-flyInRight: flyInRight 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-flyInTop: flyInTop 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-flyInBottom: flyInBottom 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px) rotate(-2deg); }
+    40%, 80% { transform: translateX(5px) rotate(2deg); }
+  }
+
+  @keyframes typing-dot {
+    0%, 80%, 100% { opacity: 0; }
+    40% { opacity: 1; }
+  }
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    10% { transform: rotate(-10deg) scale(1.1); }
+    20% { transform: rotate(10deg) scale(1.1); }
+    30% { transform: rotate(-10deg) scale(1.1); }
+    40% { transform: rotate(10deg) scale(1.1); }
+    50% { transform: rotate(0deg) scale(1); }
+  }
+
+  @keyframes slideUp {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+  }
+
+  @keyframes flyInLeft {
+    0% { transform: translate(-150vw, -50vh) rotate(-90deg) scale(0.5); opacity: 0; }
+    100% { transform: translate(0, 0) rotate(0) scale(1); opacity: 1; }
+  }
+  @keyframes flyInRight {
+    0% { transform: translate(150vw, -50vh) rotate(90deg) scale(0.5); opacity: 0; }
+    100% { transform: translate(0, 0) rotate(0) scale(1); opacity: 1; }
+  }
+  @keyframes flyInTop {
+    0% { transform: translate(0, -150vh) rotate(-180deg) scale(0.5); opacity: 0; }
+    100% { transform: translate(0, 0) rotate(0) scale(1); opacity: 1; }
+  }
+  @keyframes flyInBottom {
+    0% { transform: translate(0, 150vh) rotate(180deg) scale(0.5); opacity: 0; }
+    100% { transform: translate(0, 0) rotate(0) scale(1); opacity: 1; }
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 22px;
+    height: 22px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-left: 3px solid #000;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #C4A4F9;
+    border: 3px solid #000;
+    border-right: none;
+    background-image: linear-gradient(to top, #000 3px, transparent 3px),
+                      linear-gradient(to left, #000 3px, transparent 3px);
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #88F0E5;
+  }
+  .custom-scrollbar::-webkit-scrollbar-corner {
+    background: #ffffff;
+    border-left: 3px solid #000;
+    border-top: 3px solid #000;
+  }
+}

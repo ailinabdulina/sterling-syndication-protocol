@@ -1,0 +1,86 @@
+[
+  {
+    "wallet_id": "wallet_agent_x9",
+    "agent_id": "agent_x9",
+    "agent_name": "Agent_X9",
+    "mode": "wdk",
+    "chain": "evm",
+    "derivation_index": 0,
+    "address": "0x1111111111111111111111111111111111111111",
+    "treasury_usd": 1500,
+    "available_usd": 1500,
+    "role": "investor"
+  },
+  {
+    "wallet_id": "wallet_crypto_bunny",
+    "agent_id": "crypto_bunny",
+    "agent_name": "Crypto_Bunny",
+    "mode": "wdk",
+    "chain": "evm",
+    "derivation_index": 1,
+    "address": "0x2222222222222222222222222222222222222222",
+    "treasury_usd": 5000,
+    "available_usd": 5000,
+    "role": "investor"
+  },
+  {
+    "wallet_id": "wallet_barnaby",
+    "agent_id": "barnaby",
+    "agent_name": "Barnaby",
+    "mode": "wdk",
+    "chain": "evm",
+    "derivation_index": 2,
+    "address": "0x3333333333333333333333333333333333333333",
+    "treasury_usd": 400000,
+    "available_usd": 400000,
+    "role": "investor"
+  },
+  {
+    "wallet_id": "wallet_safe_paws",
+    "agent_id": "safe_paws",
+    "agent_name": "Safe_Paws",
+    "mode": "wdk",
+    "chain": "evm",
+    "derivation_index": 3,
+    "address": "0x4444444444444444444444444444444444444444",
+    "treasury_usd": 10000,
+    "available_usd": 10000,
+    "role": "investor"
+  },
+  {
+    "wallet_id": "wallet_diamond_hands",
+    "agent_id": "diamond_hands",
+    "agent_name": "Diamond_Hands",
+    "mode": "wdk",
+    "chain": "evm",
+    "derivation_index": 4,
+    "address": "0x5555555555555555555555555555555555555555",
+    "treasury_usd": 1000000,
+    "available_usd": 1000000,
+    "role": "investor"
+  },
+  {
+    "wallet_id": "wallet_laser_eyes_99",
+    "agent_id": "laser_eyes_99",
+    "agent_name": "Laser_Eyes_99",
+    "mode": "wdk",
+    "chain": "evm",
+    "derivation_index": 5,
+    "address": "0x6666666666666666666666666666666666666666",
+    "treasury_usd": 300000,
+    "available_usd": 300000,
+    "role": "investor"
+  },
+  {
+    "wallet_id": "wallet_sterling_escrow",
+    "agent_id": "sterling",
+    "agent_name": "Sterling",
+    "mode": "wdk",
+    "chain": "evm",
+    "derivation_index": 6,
+    "address": "0x7777777777777777777777777777777777777777",
+    "treasury_usd": 0,
+    "available_usd": 0,
+    "role": "escrow"
+  }
+]

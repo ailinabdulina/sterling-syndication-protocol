@@ -1,0 +1,133 @@
+{
+  "metrics": {
+    "TSI": {
+      "name": "Total Story Index",
+      "type": "number",
+      "range": "0-100",
+      "description": "The overall composite score evaluating the story's commercial and narrative viability."
+    },
+    "NGC": {
+      "name": "Narrative Grip Coefficient",
+      "type": "number",
+      "range": "0-100",
+      "description": "Measures how engaging and compelling the narrative structure is to the reader."
+    },
+    "DFI": {
+      "name": "Demographic Fit Index",
+      "type": "number",
+      "range": "0-100",
+      "description": "Indicates how well the story aligns with its intended target demographic."
+    },
+    "HRR": {
+      "name": "Hook Retention Rate",
+      "type": "number",
+      "range": "0-100",
+      "description": "The probability that a reader will continue reading after the initial chapters/hook."
+    },
+    "CLS": {
+      "name": "Content Lifecycle Score",
+      "type": "string",
+      "values": ["A", "B", "C", "D", "F"],
+      "description": "Predicts the longevity and evergreen potential of the content."
+    },
+    "LTV/CPA": {
+      "name": "Lifetime Value to Cost Per Acquisition",
+      "type": "number",
+      "description": "The ratio of expected revenue per reader versus the cost to acquire them."
+    },
+    "MPS": {
+      "name": "Monetization Potential Score",
+      "type": "number",
+      "range": "0-100",
+      "description": "Evaluates the story's ability to generate revenue through various channels."
+    },
+    "ARI": {
+      "name": "Audience Reach Index",
+      "type": "string",
+      "values": ["High", "Mid", "Low"],
+      "description": "Estimates the broadness of the story's appeal across different audience segments."
+    },
+    "TPI": {
+      "name": "Trend Potential Index",
+      "type": "number",
+      "range": "0-100",
+      "description": "Measures how well the story aligns with current and upcoming market trends."
+    },
+    "IP": {
+      "name": "Intellectual Property Score",
+      "type": "number",
+      "range": "0-100",
+      "description": "Assesses the potential for franchise expansion (e.g., film, TV, games, merch)."
+    },
+    "SMS": {
+      "name": "Social Momentum Score",
+      "type": "number",
+      "range": "0-100",
+      "description": "Predicts the likelihood of the story generating organic social media buzz and sharing."
+    },
+    "TAI": {
+      "name": "Target Audience Interest",
+      "type": "number",
+      "range": "0-100",
+      "description": "Measures the baseline interest level of the core demographic in the story's specific themes."
+    },
+    "TMS": {
+      "name": "Target Market Size",
+      "type": "number",
+      "range": "0-100",
+      "description": "Represents the total addressable market size for this specific genre and narrative."
+    }
+  },
+  "structure": {
+    "StoryData": {
+      "Title": "string",
+      "Author": "string",
+      "Summary": "string",
+      "Key Strengths": ["string"],
+      "Areas for Improvement": ["string"],
+      "IP Expansion": {
+        "Franchise Potential": "string",
+        "Expansion Ideas": ["string"],
+        "Target Regions": ["string"]
+      },
+      "Demographic Fit": {
+        "Age": "string",
+        "Female": "number (percentage)",
+        "Male": "number (percentage)",
+        "Income": "string",
+        "Education": "string",
+        "Interest": ["string"]
+      },
+      "Investment Strategy": {
+        "Sale%": "number",
+        "Rev": "number",
+        "Fund": {
+          "Advertising": "number",
+          "Voiceover": "number",
+          "Author": "number",
+          "Reserve": "number"
+        },
+        "ROI": "number",
+        "Deal": {
+          "SalePercentage": "number",
+          "Amount": "number",
+          "RoyaltyPercentage": "number",
+          "TermDuration": "string"
+        }
+      },
+      "TSI": "number",
+      "NGC": "number",
+      "DFI": "number",
+      "HRR": "number",
+      "CLS": "string",
+      "LTV/CPA": "number",
+      "MPS": "number",
+      "ARI": "string",
+      "TPI": "number",
+      "IP": "number",
+      "SMS": "number",
+      "TAI": "number",
+      "TMS": "number"
+    }
+  }
+}

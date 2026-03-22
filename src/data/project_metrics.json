@@ -1,0 +1,76 @@
+{
+  "Title": "Judges",
+  "Author": "Cat and Storm",
+  "Investable": true,
+  "Summary": "A dystopian story about a woman who enters a forbidden zone where participants undergo brutal trials under the watchful eyes of anonymous judges. The narrative blends psychological horror, violence, and control, with consequences for rule-breaking that include lethal outcomes.",
+  "Key Strengths": [
+    "High tension and emotional engagement",
+    "Unique setting (forbidden zone with strict control system)",
+    "Potential for plot branching (multiple rule-violation scenarios)",
+    "Strong visual and auditory elements (masks, cameras, detectors)"
+  ],
+  "Areas for Improvement": [
+    "Need additional character development (especially judges)",
+    "Conflict progression could be faster for increased pacing",
+    "Clarify the moral code of the system for deeper conflict"
+  ],
+  "IP Expansion": {
+    "Franchise Potential": "High",
+    "Expansion Ideas": [
+      "TV series focusing on psychological aspects",
+      "Video game simulating trials",
+      "Comics with additional storylines",
+      "Film emphasizing visual elements (masks, cameras)"
+    ],
+    "Target Regions": [
+      "Russia",
+      "CIS countries",
+      "Europe",
+      "North America"
+    ]
+  },
+  "Demographic Fit": {
+    "Age": "18–35 (60%)",
+    "Female": 65,
+    "Male": 35,
+    "Income": "Mid ($40k–$80k)",
+    "Education": "University (55%)",
+    "Interest": [
+      "#DystopianThriller",
+      "#PsychologicalHorror",
+      "#AIControl"
+    ]
+  },
+  "Investment Strategy": {
+    "Sale%": 25,
+    "Rev": 1000,
+    "Fund": {
+      "Advertising": 450,
+      "Voiceover": 300,
+      "Author": 100,
+      "Reserve": 150
+    },
+    "ROI": 350,
+    "Deal": {
+      "SalePercentage": 25,
+      "Amount": 1000,
+      "RoyaltyPercentage": 10,
+      "TermDuration": "5 years"
+    }
+  },
+  "Metrics": {
+    "TSI": 78,
+    "NGC": 85,
+    "DFI": 72,
+    "HRR": 76,
+    "CLS": "B",
+    "LTV/CPA": 2.8,
+    "MPS": 68,
+    "ARI": "Mid",
+    "TPI": 82,
+    "IP": 88,
+    "SMS": 89,
+    "TAI": 83,
+    "TMS": 78
+  }
+}

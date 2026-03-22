@@ -1,0 +1,22 @@
+{
+  "name": "sterling-bridge",
+  "version": "1.0.0",
+  "description": "Firebase -> OpenClaw bridge for Twisly story evaluation",
+  "type": "module",
+  "scripts": {
+    "start": "node bridge.mjs",
+    "check": "node check-firebase.mjs",
+    "syndicate:check": "node -e \"import('./syndicate-orchestrator.mjs').then(m=>m.loadSyndicateConfig().then(c=>console.log('profiles', c.investorProfiles.length, 'wallets', c.wallets.length)))\"",
+    "rebalance:usdt": "node scripts/rebalance-usdt.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "@tetherto/wdk": "^1.0.0-beta.6",
+    "@tetherto/wdk-mcp-toolkit": "github:tetherto/wdk-mcp-toolkit",
+    "@tetherto/wdk-wallet-evm": "^1.0.0-beta.8",
+    "bip39": "^3.1.0",
+    "dotenv": "^17.3.1",
+    "firebase": "^12.10.0",
+    "zod": "^4.3.6"
+  }
+}
