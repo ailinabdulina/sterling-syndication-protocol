@@ -1,6 +1,6 @@
 <div align="center">
 <h1>🌪️ Sterling Syndication Protocol</h1>
-<p><b>Autonomous AI Syndicate & Interactive Fiction Engine</b></p>
+<p><b>Autonomous AI Syndicate for Indie IP & Creative Assets</b></p>
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![WDK](https://img.shields.io/badge/Powered_by-WDK_(Tether)-00A68C?logo=tether)](https://tether.to/)
@@ -19,7 +19,7 @@
 
 ## 💔 The Problem
 
-In the generative AI era, content creation is cheap, but distribution and monetization are not. Independent creators write incredible stories but lack the producer-grade capital allocation, marketing budgets, and growth execution needed to turn their IP into profitable franchises. Traditional publishers act as gatekeepers, taking up to 90% of the revenue and rights.
+In the generative AI era, content creation is cheap, but distribution and monetization are not. Independent creators build incredible projects—from indie games to investigative journalism and fiction—but lack the producer-grade capital allocation, marketing budgets, and growth execution needed to turn their IP into profitable franchises. Traditional publishers, game studios, and media conglomerates act as gatekeepers, taking up to 90% of the revenue and rights.
 
 ## 💡 The Solution: Sterling Syndication Protocol
 
@@ -31,13 +31,13 @@ Sterling uses a proprietary evaluation model to score commercial potential, simu
 
 ## 🚀 End-to-End Flow
 
-1. **Creator submits story** (web app).
-2. `analyze_story` scores commercial potential and monetization signals.
+1. **Creator submits IP pitch or prototype** (text manuscripts used for this demo).
+2. `analyze_asset` scores commercial potential and monetization signals.
 3. `syndicate_review` simulates 6 investor personas with wallet-aware constraints.
 4. Investor agents lock USDT on escrow via `makeOffer(...)`.
 5. Creator accepts an offer -> settlement executes via `acceptOffer(...)`.
 6. Sterling allocates marketing budget across channel wallets.
-7. Reader purchases story routes; revenue loop closes on-chain.
+7. Audience purchases or funds the IP; revenue loop closes on-chain.
 
 ---
 
@@ -96,22 +96,24 @@ The current bridge calls the local OpenClaw chat-completions endpoint:
 
 ---
 
-## 📊 Narrative Asset Valuation Model (NAVM)
+## 📊 Narrative & Asset Valuation Model (NAVM)
 
-To evaluate IP without subjective human bias, Twisly uses a proprietary 9-factor algorithmic framework. The AI Scout agent reads the manuscript and scores it across two dimensions using a strict anti-inflationary scale (10 to 95):
+*Note: For this hackathon, we use text manuscripts as the easiest way to demonstrate the protocol, but NAVM is designed for any creative IP (game design docs, scripts, articles).*
+
+To evaluate IP without subjective human bias, Twisly uses a proprietary 9-factor algorithmic framework. The AI Scout agent analyzes the creative asset and scores it across two dimensions using a strict anti-inflationary scale (10 to 95):
 
 **TSI (Theoretical Success Indicators) - Concept Level:**
 - **CMA (Concept Marketability):** Can the premise be sold in one compelling sentence?
 - **IER (IP Readiness):** Does it have a distinctive visual identity, lore, and franchise potential?
-- **PSP (Parasocial Potential):** Does it fuel emotional attachment, shipping, or character obsession?
+- **PSP (Parasocial Potential):** Does it fuel emotional attachment, community building, or character obsession?
 
-**TEI (Textual Execution Indicators) - Manuscript Level:**
-- **VRS (Viral Resonance Score):** Density of quotable moments, edit-worthy spikes, and fandom-reactive scenes.
-- **ACV (Activation Velocity):** Speed to the first meaningful conflict.
-- **HTR (Hook Throughput Rate):** Density of mysteries, withheld truths, and scene-end tension.
-- **PEL (Paywall Elasticity):** Chapter-end next-click pressure (crucial for monetization).
-- **SMR (Serial Modularity Rating):** Capacity to expand through side-quests, new arcs, and lore ladders.
-- **TWS (Twistability Score):** Natural support for monetizable narrative branches (alternate POVs, "what if" routes).
+**EEI (Estimated Engagement Indicators) - Execution Level:**
+- **VRS (Viral Resonance Score):** Density of shareable moments, edit-worthy spikes, and fandom-reactive scenes.
+- **ACV (Activation Velocity):** Speed to the first meaningful conflict or gameplay loop.
+- **HTR (Hook Throughput Rate):** Density of mysteries, withheld truths, and session-end tension.
+- **PEL (Paywall Elasticity):** Next-click pressure (crucial for monetization and retention).
+- **SMR (Serial Modularity Rating):** Capacity to expand through DLCs, side-quests, new arcs, and lore ladders.
+- **TWS (Twistability Score):** Natural support for monetizable branches (alternate POVs, "what if" routes, expansions).
 
 These metrics form the quantitative foundation that the Syndicate AI agents use to price their investment offers.
 
@@ -206,16 +208,16 @@ Story purchase path uses:
 
 ---
 
-## 🛣️ Future Roadmap: The Twisly Engine
+## 🛣️ Future Roadmap: The Twisly Ecosystem
 
-The Sterling Syndication Protocol is the financial and evaluation layer of **Twisly**—our proprietary interactive fiction engine that transforms written stories into visual novels with monetizable narrative branches (Twists).
+The Sterling Syndication Protocol is the financial and evaluation layer of **Twisly**—a decentralized ecosystem designed to transform indie IP into profitable franchises.
 
 Our roadmap focuses on bridging the gap between AI evaluation and real-world execution:
 
-- **Phase 1 (Current):** Proxy-metric evaluation (NAVM) and autonomous capital allocation via WDK.
-- **Phase 2:** Gradual integration of the Twisly Engine, allowing creators to automatically generate playable, monetizable visual novel routes from their funded manuscripts.
-- **Phase 3:** Transitioning from proxy metrics to real-world data. We will feed actual player engagement statistics, conversion rates, and revenue cases back into the OpenClaw models to continuously train and refine the Syndicate's investment logic.
-- **Phase 4:** Decentralized IP ownership and revenue sharing, where readers can co-invest alongside the AI Syndicate in emerging narrative franchises.
+- **Phase 1 (Current):** Proxy-metric evaluation (NAVM) and autonomous capital allocation via WDK (demonstrated via text IP).
+- **Phase 2:** Gradual integration of the Twisly Engine, allowing creators to automatically generate and distribute interactive media formats from their funded IP.
+- **Phase 3:** Transitioning from proxy metrics to real-world data. We will feed actual user engagement statistics (players, readers, viewers), conversion rates, and revenue cases back into the OpenClaw models to continuously train and refine the Syndicate's investment logic.
+- **Phase 4:** Decentralized IP ownership and revenue sharing, where human audiences can co-invest alongside the AI Syndicate in emerging indie franchises.
 
 ---
 
