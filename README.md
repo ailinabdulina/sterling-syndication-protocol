@@ -1,6 +1,6 @@
 <div align="center">
 <h1>🌪️ Sterling Syndication Protocol</h1>
-<p><b>Autonomous AI Syndicate for Indie IP & Creative Assets</b></p>
+<p><b>Kill the Gatekeepers. The first trustless, AI-driven publishing syndicate that lets anyone fund Indie IP and earn automated royalties via WDK.</b></p>
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![WDK](https://img.shields.io/badge/Powered_by-WDK_(Tether)-00A68C?logo=tether)](https://tether.to/)
@@ -17,15 +17,23 @@
 
 ---
 
-## 💔 The Problem
+## 💔 The Broken System (The Problem)
 
-In the generative AI era, content creation is cheap, but distribution and monetization are not. Independent creators build incredible projects—from indie games to investigative journalism and fiction—but lack the producer-grade capital allocation, marketing budgets, and growth execution needed to turn their IP into profitable franchises. Traditional publishers, game studios, and media conglomerates act as gatekeepers, taking up to 90% of the revenue and rights.
+Currently, the creative industry is fundamentally broken for both creators and retail audiences:
+
+1. **The Humiliating Fundraising Process (For Creators):** In the generative AI era, content creation is cheap, but distribution is not. You either go to Kickstarter and become a begging marketer, or go to a publisher. Traditional publishers act as human gatekeepers with subjective tastes, taking up to 90% of the revenue and IP rights.
+2. **The Walled Garden of Media Investment (For Everyday People):** If you have $500, you cannot invest it into the early-stage development of a promising indie game and get a % of future sales. Profitable IP funding is entirely controlled by mega-publishers and studios.
+3. **The Trust Gap:** Nobody trusts anyone. Micro-investors won't fund unknown creators (fear of rug pulls), and creators don't trust publishers/investors (fear of unpaid royalties).
 
 ## 💡 The Solution: Sterling Syndication Protocol
 
-**Twisly** introduces the **Sterling Syndication Protocol**: an autonomous AI investor room that evaluates IP without human bias and executes funding and distribution flows entirely on-chain. 
+**Twisly** introduces the **Sterling Syndication Protocol**: an autonomous AI publishing syndicate that evaluates IP without human bias and executes funding and distribution flows entirely on-chain. 
 
-Sterling uses a proprietary evaluation model to score commercial potential, simulates investor personas to negotiate terms, and instantly allocates USDT capital via smart contracts to fund marketing and distribution.
+Here is what changes:
+
+- **No More Gatekeepers:** A creator simply uploads their project. An AI evaluates it based on objective, dry metrics (NAVM — virality, retention, monetization). If the metrics align, a smart contract automatically transfers USDT to fund marketing. No pitch decks, no begging, no subjective rejections.
+- **Democratizing IP Ownership / Co-Publishing (BYOA):** Anyone can create their own AI agent, give it a WDK wallet, deposit $500, and set a strategy (e.g., *"Fund $50 only in sci-fi stories with high viral potential"*). The agent acts as your personal micro-publisher, scanning new projects in the Sterling Protocol 24/7 and automatically deploying your capital.
+- **Trustless Execution & Guaranteed Royalties:** When an AI agent decides to fund an IP, it signs a smart contract via WDK. The money is locked in Escrow. The profit distribution rules are hardcoded into the blockchain (`acceptOffer` -> smart contract). When the product starts selling, the smart contract automatically routes royalties back to the WDK wallets of the agents. Nobody can cheat anyone.
 
 ---
 
