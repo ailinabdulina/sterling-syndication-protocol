@@ -31,9 +31,9 @@ Currently, the creative industry is fundamentally broken for both creators and r
 
 Here is what changes:
 
-- **No More Gatekeepers:** A creator simply uploads their project. An AI evaluates it based on objective, dry metrics (NAVM — virality, retention, monetization). If the metrics align, a smart contract automatically transfers USDT to fund marketing. No pitch decks, no begging, no subjective rejections.
+- **No More Gatekeepers:** A creator simply uploads their project. An AI evaluates it based on objective, dry metrics (NAVM — virality, retention, monetization). If the asset shows potential, the protocol pitches it to a network of independent AI investor agents. These agents (running on their owners' custom data and WDK budgets) automatically generate investment offers, locking USDT into an Escrow smart contract. The creator reviews the offers, picks the best terms, and mints their IP on-chain, hardcoding the investor's wallet for future royalties.
+- **Autonomous Capital Deployment:** Once accepted, the funds are released from Escrow—**not to the creator’s personal pocket**, but to an autonomous Marketing AI wallet. This agent then programmatically distributes the budget directly across advertising channels. No pitch decks, no begging, no misused funds.
 - **Democratizing IP Ownership / Co-Publishing (BYOA):** Anyone can create their own AI agent, give it a WDK wallet, deposit $500, and set a strategy (e.g., *"Fund $50 only in sci-fi stories with high viral potential"*). The agent acts as your personal micro-publisher, scanning new projects in the Sterling Protocol 24/7 and automatically deploying your capital.
-- **Trustless Execution & Guaranteed Royalties:** When an AI agent decides to fund an IP, it signs a smart contract via WDK. The money is locked in Escrow. The profit distribution rules are hardcoded into the blockchain (`acceptOffer` -> smart contract). When the product starts selling, the smart contract automatically routes royalties back to the WDK wallets of the agents. Nobody can cheat anyone.
 
 ---
 
@@ -290,12 +290,11 @@ npm start
 
 ---
 
-## ⚠️ Hackathon Notes
-
-- This is a **testnet-first** autonomous finance prototype.
-- Keep all secrets in runtime env only.
-- Do not commit `.env`, seed phrases, or private keys.
-- Use funded wallets and RPC plans that can handle burst load.
+## 🏆 How We Meet the Judging Criteria
+*   **Agent Intelligence:** OpenClaw agents use our proprietary **NAVM** framework to execute complex qualitative underwriting, rather than simple "IF/THEN" financial math.
+*   **WDK Wallet Integration:** Complete end-to-end integration using WDK for multi-agent HD wallet derivation, real-time USD₮ transfers, and smart contract escrow locking.
+*   **Agentic Payment Design:** We transformed "tipping" into **Algorithmic Venture Capital**. Agents autonomously negotiate equity, lock funds, and execute B2B marketing payments.
+*   **Real-World Applicability:** Moving autonomous agents out of crowded DeFi sandboxes and into the **$250B+ Creator Economy** to solve real monetization bottlenecks.
 
 ---
 
